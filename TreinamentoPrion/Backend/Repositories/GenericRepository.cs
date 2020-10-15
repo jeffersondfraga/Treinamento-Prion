@@ -35,17 +35,18 @@ namespace Backend.Repositories
             context.SaveChanges();
         }
 
-        /*
-        public FindById(T entity)
+        
+        public T FindById(int id)
         {
-
+            return context.Set<T>().Find(id);
         }
 
-        public ListAll(T entity)
+        
+        public List<T> ListAll()
         {
-
+            return context.Set<T>().ToList();
         }
-        */
+        
         public void Dispose()
         {
             context.Dispose();
