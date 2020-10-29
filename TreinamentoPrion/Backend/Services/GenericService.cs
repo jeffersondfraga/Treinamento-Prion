@@ -31,20 +31,20 @@ namespace Backend.Services
             genericRepository.Update(entity);
         }
 
-        public virtual void ListAll(T entity)
+        public virtual List<T> ListAll()
         {
-            genericRepository.ListAll();
+            return genericRepository.ListAll();
         }
 
-        public virtual void FindById(int Id)
+        public virtual T FindById(int Id)
         {
-            genericRepository.FindById(Id);
+            return genericRepository.FindById(Id);
         }
 
 
         public void Dispose()
         {
-
+            genericRepository.Dispose();
         }
     }
 }

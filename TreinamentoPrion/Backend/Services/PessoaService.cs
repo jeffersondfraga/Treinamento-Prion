@@ -7,18 +7,16 @@ using System.Threading.Tasks;
 
 namespace Backend.Services
 {
-    class PessoaService : GenericService<Pessoa>
-    {
-        private GenericService<Pessoa> pessoaService;
-        
-        public override void ListAll(Pessoa entity)
+    public class PessoaService : GenericService<Pessoa>
+    {        
+        public override List<Pessoa> ListAll()
         {
             List<Pessoa> listPessoa = new List<Pessoa>();
             Pessoa people = new Pessoa();
             
             people.PessoaId = 0;
             people.Nome = "Nandi";
-            people.Email = "nandi00@gmail.com.br";            
+            people.Email = "nandi00@gmail.com.br";
             listPessoa.Add(people);
 
             people.PessoaId = 1;
@@ -47,12 +45,11 @@ namespace Backend.Services
             listPessoa.Add(people);
 
             people.PessoaId = 6;
-            people.Nome = "Scooby";
-            people.Email = "scooby06@gmail.com.br";
+            people.Nome = "Juvi";
+            people.Email = "juvi06@gmail.com.br";
             listPessoa.Add(people);
-
-
-            //.ListAll(entity);
+            
+            return listPessoa;
         }
     }
 }

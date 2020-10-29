@@ -1,15 +1,16 @@
-﻿using Backend.Services;
+﻿using Backend.Entities;
+using Backend.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Http;
 
 namespace API.Controllers
 {
-    public class GenericController<T> : Controller where T : class
+    public class GenericController<T> : ApiController where T : class
     {
-        private GenericService<T> service;
+        protected GenericService<T> service;
 
         public GenericController()
         {
@@ -26,14 +27,16 @@ namespace API.Controllers
             service.Delete(entity);
         }
 
+        //[Route("list-all")] pesquisar dispois
         public virtual void Update(T entity)
         {
             service.Update(entity);
         }
 
-        public virtual void ListAll(T entity)
+        [HttpGet]
+        public virtual void ListAll()
         {
-            service.ListAll(entity);
+            service.ListAll();
         }
 
         public virtual void FindById(int id)

@@ -10,7 +10,7 @@ namespace Backend.Context
 {
     public class GenericContext : DbContext
     {
-        public GenericContext() : base("")
+        public GenericContext() : base("a")
         {
 
         }
