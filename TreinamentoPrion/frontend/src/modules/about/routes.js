@@ -6,3 +6,5 @@ export const routes = [
     name: 'about',
   },
 ];
+
+export default routes;

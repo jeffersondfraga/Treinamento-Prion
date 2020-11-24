@@ -2,7 +2,7 @@
     <v-container id = "login">
         <v-form @submit="login">
             <v-row>
-                <v-col>
+                <v-col cols="4">
                     <v-p> Login </v-p>
                     <v-text-field v-model="payload.Login">
 
@@ -11,7 +11,7 @@
             </v-row>
 
             <v-row>
-                <v-col>
+                <v-col cols="4">
                     <v-p> Password </v-p>
                     <v-text-field v-model="payload.Password">
 
@@ -20,7 +20,7 @@
             </v-row>
 
             <v-row>
-                <v-col>
+                <v-col cols="4">
                     <v-btn>
                         Logar
                     </v-btn>
@@ -44,7 +44,7 @@ export default {
       'setUser',
     ]),
     login() {
-      if (this.payload.Login === '123456' && this.payload.Password === '123456') {
+      if (this.payload.Login === '123' && this.payload.Password === '123') {
         this.setUser(this.payload);
         console.log('Logou!');
       }
@@ -54,7 +54,5 @@ export default {
 </script>
 
 <style scoped>
-    #login {
-        background-color: gray;
-    }
+
 </style>

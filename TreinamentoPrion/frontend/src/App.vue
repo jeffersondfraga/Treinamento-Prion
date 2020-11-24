@@ -25,7 +25,11 @@
         />
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer col="4">
+        <v-btn > Home </v-btn>
+        <v-btn> Login </v-btn>
+        <v-btn> About </v-btn>
+      </v-spacer>
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -44,8 +48,8 @@
 </template>
 
 <script>
+
 import Login from '@/modules/login/Login.vue';
-// import About from '@/modules/about/About.vue';
 
 export default {
   name: 'App',
